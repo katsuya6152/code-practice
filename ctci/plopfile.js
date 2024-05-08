@@ -7,8 +7,8 @@ module.exports = function (
       prompts: [
         {
             type: 'input',
-            name: 'path',
-            message: 'どのディレクトリに作成しますか？ （ex: src/chapter1)',
+            name: 'dir',
+            message: 'どのディレクトリに作成しますか？ （ex: chapter1)',
           },
           {
             type: 'input',
@@ -19,12 +19,12 @@ module.exports = function (
       actions: [
         {
             type: 'add',
-            path: '{{path}}/{{name}}/{{name}}.ts',
+            path: 'src/{{dir}}/{{name}}/{{name}}.ts',
             templateFile: 'plop-templates/problem.tsx.hbs',
           },
           {
             type: 'add',
-            path: '{{path}}/{{name}}/{{name}}.test.ts',
+            path: 'src/{{dir}}/{{name}}/{{name}}.test.ts',
             templateFile: 'plop-templates/problem.test.tsx.hbs',
           },
       ],
