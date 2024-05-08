@@ -1,7 +1,7 @@
 // 重複のない文字列
 
 // setを使用できる場合
-export function isUniqueChars(str: string): boolean {
+export const isUniqueChars = (str: string): boolean => {
     const charSet = new Set<string>();
 
     for (const char of str) {
