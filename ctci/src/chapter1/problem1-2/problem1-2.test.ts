@@ -1,15 +1,19 @@
-import { answer } from './problem1-2';
+import { isSameStringRearranged } from './problem1-2';
 
 describe('answer', () => {
     test('test1', () => {
-        expect(answer("arg")).toBe(true);
+        expect(isSameStringRearranged("str1", "1rts")).toBe(true);
     });
 
     test('test2', () => {
-        expect(answer("arg")).toBe(false);
+        expect(isSameStringRearranged("str1", "str2")).toBe(false);
     });
 
     test('test3', () => {
-        expect(answer("arg")).toBe(true);
+        expect(isSameStringRearranged("aaa", "aaa")).toBe(true);
+    });
+
+    test('test4', () => {
+        expect(isSameStringRearranged("aa", "aaaa")).toBe(false);
     });
 });
